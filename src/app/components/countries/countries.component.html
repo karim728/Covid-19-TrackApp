@@ -1,0 +1,6 @@
+<div>
+    <app-countriescards (selectedC)="getSelectedCountry($event)"></app-countriescards>
+    <!-- <app-tablecards [countryData]="countryData"></app-tablecards> -->
+    <app-statusboard [selectedCountry]="selectedCountry" [globalData]="globalData"></app-statusboard>
+    <app-graphcard [globalData]="globalData"></app-graphcard>
+</div>

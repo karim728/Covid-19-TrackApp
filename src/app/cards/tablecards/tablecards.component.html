@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">Cases</th>
+        <th scope="col">Recovered</th>
+        <th scope="col">Deaths</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of countryData.data.timeline;let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{c.date}}</td>
+        <td>{{c.cases}}</td>
+        <td>{{c.recovered}}</td>
+        <td>{{c.deaths}}</td>
+      </tr>
+    </tbody>
+  </table>

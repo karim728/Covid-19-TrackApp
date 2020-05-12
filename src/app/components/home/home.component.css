@@ -1,0 +1,27 @@
+.box{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../assets/epidemic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infobox{
+display: grid;
+width: 35%;
+height: 35%;
+color: antiquewhite;
+}
+
+.infobox p{
+    align-items: center;
+    justify-items: center;
+}
+
+.card{
+    background-color: transparent !important;
+    color: white;
+    width: 35% !important;
+    padding: 2%;
+}
