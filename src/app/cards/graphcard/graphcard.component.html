@@ -11,11 +11,21 @@
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
         <label class="form-check-label" for="inlineRadio3">Death</label>
       </div>
-<!-- {{globalData.cases}}
+
+   <!-- <google-chart [data]="pieChart"  *ngIf="isavailable==true" ></google-chart> {{isavailable}} -->
+ 
+   <div *ngIf="isavailable==true">
+    <div style="display: block">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
+  </div>
 {{globalData.active}}
-{{globalData.deaths}}
-{{globalData.recovered}} -->
-     
-   <google-chart [data]="pieChart"  ></google-chart>
+ 
 </div>
  

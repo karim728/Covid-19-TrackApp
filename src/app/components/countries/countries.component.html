@@ -1,6 +1,26 @@
 <div>
-    <app-countriescards (selectedC)="getSelectedCountry($event)"></app-countriescards>
-    <!-- <app-tablecards [countryData]="countryData"></app-tablecards> -->
+    
+    <!-- -->
     <app-statusboard [selectedCountry]="selectedCountry" [globalData]="globalData"></app-statusboard>
-    <app-graphcard [globalData]="globalData"></app-graphcard>
+    <!-- <google-chart [data]="pieChart"  *ngIf="isavailable==true"></google-chart> {{isavailable}} -->
+    <!-- <app-graphcard [globalData]="globalData"></app-graphcard> -->
+
+
+
+      <div class="row">
+        <div class="row"><app-countriescards (selectedC)="getSelectedCountry($event)"></app-countriescards></div>
+        <div class="col"> <app-tablecards [countryData]="countryData"></app-tablecards></div>
+        <div class="col">
+    <div *ngIf="isavailable==true">
+        <div style="display: block">
+          <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+          </canvas>
+        </div>
+      </div></div>
+      </div>
 </div>

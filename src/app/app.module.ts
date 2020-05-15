@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from  '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { Ng2GoogleChartsModule, GoogleChartsSettings } from 'ng2-google-charts';
-
+import { ChartsModule } from 'ng2-charts';
 
 
 import { AppComponent } from './app.component';
@@ -30,6 +30,7 @@ import { GraphcardComponent } from './cards/graphcard/graphcard.component';
     BrowserModule,
     HttpClientModule,
     Ng2GoogleChartsModule,
+    ChartsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'countries', component: CountriesComponent },
